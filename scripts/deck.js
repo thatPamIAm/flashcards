@@ -6,8 +6,6 @@ class Deck {
   count(){
     return this.cards.length;
   }
-
-
 }
 
 export default Deck

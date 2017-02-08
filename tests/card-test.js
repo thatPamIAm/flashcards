@@ -8,7 +8,7 @@ import Card from '../scripts/card'
     });
 
     it('should allow you to pass in a question and a response when a new object is created', () => {
-      let card = new Card ("What is the capital of Alaska?", "Juneau");
+      let card = new Card ({question:"What is the capital of Alaska?", answer:"Juneau"});
       expect(card.question).to.deep.equal("What is the capital of Alaska?");
       expect(card.answer).to.deep.equal("Juneau");
     });

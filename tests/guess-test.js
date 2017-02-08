@@ -11,7 +11,7 @@ it('should have a constructor function called Guess that instatiates new objects
 });
 
 it('should be able to pull back the object passed into the class of Guess', () => {
-  let card = new Card ("What is the capital of Alaska?", "Juneau");
+  let card = new Card ({question:"What is the capital of Alaska?", answer:"Juneau"});
   let guess = new Guess("Juneau", card)
   expect(guess.card).to.deep.equal({ answer: "Juneau", question:"What is the capital of Alaska?"})
 });
@@ -23,9 +23,9 @@ it('should be able to take in a response from the game player', () => {
 });
 
 it('should be able to tell the player if their guess was correct', () => {
-  let card = new Card ("What is the capital of Alaska?", "Juneau");
+  let card = new Card ({question:"What is the capital of Alaska?", answer:"Juneau"});
   let guess = new Guess("Juneau", card)
-  expect(guess.correct).to.deep.equal(true)
+  expect(guess.correct).to.equal(true)
 });
 
 it('should be able to tell the player if their guess was incorrect', () => {
@@ -35,7 +35,7 @@ it('should be able to tell the player if their guess was incorrect', () => {
 });
 
 it('should be able to give a player feedback based on having a correct answer', () => {
-  let card = new Card ("What is the capital of Alaska?", "Juneau");
+  let card = new Card ({question:"What is the capital of Alaska?", answer:"Juneau"});
   let guess = new Guess("Juneau", card)
   guess.feedback()
   expect(guess.feedback()).to.deep.equal('Correct!')
