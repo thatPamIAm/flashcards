@@ -1,5 +1,9 @@
-const card = (array) => {
-  return array
+class Card {
+  constructor(question, answer){
+    this.question = question;
+    this.answer = answer;
+  }
+
 }
 
-export default card
+export default Card
