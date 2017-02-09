@@ -1,10 +1,10 @@
+import Card from "./card"
+
 class Guess {
-  constructor(response, options){
+  constructor(response, card){
     this.response = response;
-    this.question = options.question;
-    this.answer = options.answer;
-    this.card = options;
-    if(this.response === options.answer) {
+    this.card = card;
+    if(response === card.answer) {
       this.correct =  true
     } else {
       this.correct = false
@@ -12,7 +12,7 @@ class Guess {
   }
 
   feedback(){
-    if (this.response === this.answer) {
+    if (this.correct) {
       return "Correct!"
     } else {
       return "Incorrect."

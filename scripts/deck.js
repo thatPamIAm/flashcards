@@ -1,3 +1,5 @@
+import Card from "./card"
+
 class Deck {
   constructor(card) {
     this.cards = card;
