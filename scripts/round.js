@@ -1,4 +1,4 @@
-import Guess from "./guess"
+import Guess from "./guess";
 
 class Round {
   constructor(deck){

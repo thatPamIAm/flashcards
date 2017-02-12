@@ -1,10 +1,9 @@
+require('locus')
 class Card {
-  constructor(options){
-    this.question = options.question;
-    this.answer = options.answer;
+  constructor({question, answer}){
+    this.question = question;
+    this.answer = answer;
   }
 }
 
 export default Card
-
- let card = new Card('jfkdjslfksdj', 'sjdfkldsj')
